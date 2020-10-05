@@ -1,40 +1,48 @@
+/*
+Tazreen Khan CSE 360 Assignment 01
+AddingMachine contains methods that may subtract/add from total. Or
+even be cleared 
+ */
 package cse360assignment02;
 
 public class AddingMachine {
-	  private int total;
-	  //initialize string history to 0 to initialize
+	  private int total;//hold the total amount
+	  //initialize string history to 0 to store values of methods below
 	  private String history = "0";
 
+	  /*constructor for class*/
 	  public AddingMachine () {
 	    total = 0;  // not needed - included for clarity
 	  }
 
+	  /*get the total value*/
 	  public int getTotal () {
 		  //The getTotal method should return the current total
 	    return total;
 	  }
 
+	  /*add method will add parameter (value) to total and then put into history*/
 	  public void add (int value) {
-		  //add method should add the parameter to the total variable
 		  //total += value;
 		  total = total + value;
 		  history += " + " + value;
 	  }
 
+	  /*subtract method will subtract parameter (value) to total and then put into history*/
 	  public void subtract (int value) {
-		  //The subtract method should subtract the parameter from the total variable
-		  //total -= value;
 		  total = total - value;
 		  history += " - " + value;
 	  }
 
+	  /*values of history from add/subtract method are stored in here*/
 	  public String toString () {
-		  //histroy of transaction must be stored in here and start at 0
 	    return history;
 	  }
 
+	  /* clears history of values and values stored within the total from previous methods*/
 	  public void clear() {
-		  //clear memory
+		  history = "0";
+		  total = 0;   //clear memory
 	  }
 
 	}
