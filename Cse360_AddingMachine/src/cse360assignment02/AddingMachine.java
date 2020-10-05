@@ -42,7 +42,7 @@ public class AddingMachine {
 	  /* clears history of values and values stored within the total from previous methods*/
 	  public void clear() {
 		  history = "0";
-		  total = 0;   //clear memory
+		  total = 0;   //clearing total will clear memory
 	  }
 
 	}
